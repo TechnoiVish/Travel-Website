@@ -10,7 +10,7 @@ const Navbar = () => {
    <Image src='/hilink-logo.svg' alt='logo' width={74} height={29}/>
 
 </Link>
-   <ul className='hidden h-full gap-12 lg:flex '>
+   <ul id='unorder-list' className='hidden h-full gap-12 lg:flex '>
     {NAV_LINKS.map((link)=>(
         <Link href={link.href} key={link.key} className='regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold'>
             {link.label}
@@ -29,9 +29,10 @@ const Navbar = () => {
    src="menu.svg"
    alt='menu'
    width={32}
-   height={32}/>
+   height={32} className='sm:hidden'/>
     </nav>
   )
+
 }
 
 export default Navbar
